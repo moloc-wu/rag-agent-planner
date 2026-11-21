@@ -1,0 +1,31 @@
+# ============================================
+# 智能旅行助手 —— Python 依赖清单
+# ============================================
+# 安装方式：
+#   pip install -r requirements.txt
+#
+# 说明：
+#   - 未锁定具体版本号，使用 latest 稳定版
+#   - 如需复现特定环境，可执行 pip freeze > requirements.lock.txt
+# ============================================
+
+# ---------- LLM 与 Agent 框架 ----------
+langchain                    # LangChain 主框架（LCEL 链、Agent 创建）
+langchain-community          # ChatTongyi / DashScopeEmbeddings 适配器
+langchain-core               # 核心抽象（Runnable、BaseMessage 等）
+langchain-text-splitters     # RecursiveCharacterTextSplitter 文本分割
+langchain-mcp-adapters       # MCP 客户端适配（连接高德地图 MCP 服务）
+langchain-chroma             # Chroma 向量数据库的 LangChain 集成
+langgraph                    # LangGraph Agent 运行时（create_agent 底层）
+
+# ---------- 通义千问 / 阿里百炼 ----------
+dashscope                    # 阿里百炼 SDK（ChatTongyi 底层依赖）
+
+# ---------- 向量数据库 ----------
+chromadb                     # Chroma 向量数据库（本地嵌入式）
+
+# ---------- Web 界面 ----------
+streamlit                    # Streamlit Web 框架
+
+# ---------- 配置与工具 ----------
+python-dotenv                # .env 环境变量加载
